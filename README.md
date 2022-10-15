@@ -4,13 +4,15 @@ This tool releases long-pending relayer transactions by increasing the gas price
 
 **Important, read this:**
 
-Use this tool only if you didn't have any transaction on your Matic address (hot wallet) in the last 4-6 hours otherwise you might be ruining some actual transactions being relayed.
+Use this tool only if you didn't have any transaction on your Matic address (hot wallet) in the last 4-6 hours otherwise you might be ruining some actual transactions being relayed. Even if you had failed transactions in the last 4-6 hours, forget about this tool for now.
 
-This tool is sending the reward to the blackhole (burn) address. If you have to free up the long-pending transaction, it does not really matter, where you send the reward, since it will be rejected anyway, so no reward will be received.
+This tool is sending the rewards to the blackhole (burn) address. If you have to free up the long-pending transaction, it does not really matter, where you send the reward, since it will be rejected anyway, so no reward will be received.
 
 Another thing you might expect. When you sent in a document to be relayed and the transaction got stuck, your relayer was definitely not aware of this and was keep relaying new and new docs. These are still in the "queue" (mempool) on the blockchain, but the pending transactions blocking them to be mined.
 
 Therefore, **DON'T BE SURPRISED TO SEE A LOT OF DOCUMENTS TO BE FAILED ON YOUR MATIC ADDRESS** (soft wallet). This is painful, but still expected by the nature of the blockchain.
+
+Once you used the tool (use it only once in an hour max.), you have to check you Matic address (hot wallet) on Polygonscan. You have to see at least one new transaction. But if there are no new further transactions for let's say 2 hours, you might need to run it again and keep it repeating until a new relayed transaction pops up on Polygonscan.
 
 ## Installation
 
